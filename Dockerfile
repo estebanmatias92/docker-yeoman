@@ -4,8 +4,9 @@ MAINTAINER "Matias Esteban" <estebanmatias92@gmail.com>
 
 RUN npm install -g yo bower grunt-cli gulp
 
-RUN adduser --disabled-password --group root --gecos "" yeoman; \
-  echo "yeoman ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+RUN adduser --disabled-password --gecos "" yeoman; \
+  echo "yeoman ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers; \
+  usermod -a -G root yeoman
 
 ENV HOME /home/yeoman
 
