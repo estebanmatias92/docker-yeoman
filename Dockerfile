@@ -2,7 +2,7 @@ FROM node
 
 MAINTAINER "Matias Esteban" <estebanmatias92@gmail.com>
 
-RUN adduser --disabled-password --group root --gecos "" yeoman; \
+RUN adduser --disabled-password --gecos "" yeoman; \
   echo "yeoman ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 ENV HOME /home/yeoman
