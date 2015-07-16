@@ -6,7 +6,7 @@ USER root
 
 # Install build and runtime dependencies
 RUN deps=' \
-        ruby1.9.1-dev \
+        ruby \
     ' \
     && apt-get update && apt-get install -y $deps && rm -rf /var/lib/apt/lists/*
 
