@@ -8,7 +8,7 @@ RUN deps=' \
     ' \
     && sudo apt-get update && sudo apt-get install -y $deps && sudo rm -rf /var/lib/apt/lists/*
 
-RUN sudo gem install sass compass \
+RUN gem install sass compass \
     && npm install -g coffee-script stylus jade typescript
 
 RUN npm install -g yo bower grunt-cli gulp \
