@@ -4,6 +4,7 @@ MAINTAINER "Matias Esteban" <estebanmatias92@gmail.com>
 
 # Install build and runtime dependencies
 RUN deps=' \
+        ruby \
         ruby-dev \
     ' \
     && sudo apt-get update && sudo apt-get install -y $deps && sudo rm -rf /var/lib/apt/lists/*
